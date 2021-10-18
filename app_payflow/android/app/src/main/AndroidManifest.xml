@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app_pay_flow">
+    package="com.example.payflowprevious">
    <application
-        android:label="app_pay_flow"
+        android:label="payflowprevious"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,13 @@
+"configurations":[
+    {
+        "name": "payflow",
+        "request": "launch",
+        "tupe": "dart"
+    },
+    {
+        "name": "payflow (profile mode)",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "profile"
+    }
+]

@@ -1,46 +1,19 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/login/login_page.dart';
+import 'package:payflow/modules/splash/splash_page.dart';
+import 'package:payflow/shared/themes/app_colors.dart';
 
 void main() {
-  runApp(MaterialApp(
-    theme: ThemeData(primarySwatch: Colors.purple),
-    home: HomePage(),
-  ));
+  runApp(AppWidget());
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  var count = 0;
-
-  void increment() {
-    count++;
-    setState(() {});
-    print(count);
-  }
-
+class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // ignore: prefer_const_constructors
-        title: Text("Primeira aplicação"),
-      ),
-      body: Center(
-          child: Text(
-        "CONTADOR\n$count",
-        textAlign: TextAlign.center,
-      )),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          increment();
-        },
-      ),
+    return MaterialApp(
+      title: 'Pay Flow',
+      theme: ThemeData(primaryColor: AppColors.primary),
+      home: LoginPage(),
     );
   }
 }
