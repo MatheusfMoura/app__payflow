@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:payflow/shared/widgets/social_login/social_login_button.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -52,7 +53,19 @@ class _LoginPageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                       style: TextStyles.titleHome,
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 70,
+                      right: 70,
+                      top: 30,
+                    ),
+                    child: SocialLoginButton(
+                      onTap: () {
+                        print("clicou");
+                      },
+                    ),
+                  ),
                 ],
               ),
             )
